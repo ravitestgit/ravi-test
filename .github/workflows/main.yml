@@ -21,3 +21,5 @@ jobs:
     # Runs a single command using the runners shell
     - name: Run blossom ci
       run: blossom-ci
+      env: 
+        ci-server: ${{ secrets.ci-server }}
