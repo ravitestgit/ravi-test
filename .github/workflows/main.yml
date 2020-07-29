@@ -19,7 +19,7 @@ jobs:
     steps:
 
     # Runs a single command using the runners shell
-    - name: Run blossom ci
+    - name: Start blossom ci
       run: blossom-ci
       env: 
         CI_SERVER: ${{ secrets.CI_SERVER }}
