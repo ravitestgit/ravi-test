@@ -22,4 +22,4 @@ jobs:
     - name: Run blossom ci
       run: blossom-ci
       env: 
-        ci-server: ${{ secrets.ci-server }}
+        CI_SERVER: ${{ secrets.CI_SERVER }}
