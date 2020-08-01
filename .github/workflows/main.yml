@@ -20,7 +20,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Start blossom ci
-      run: export
+      run: blossom-ci
       env: 
         CI_SERVER: ${{ secrets.CI_SERVER }}
         REPO_DATA: ${{ secrets.GITHUB_TOKEN }}
