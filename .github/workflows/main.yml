@@ -12,7 +12,7 @@ on:
 jobs:
   # This workflow contains a single job called "build"- if: github.event_name == 'release' && github.event.action == 'created'
   build:
-    if: github.event.comment.body == ${{ secrets.CI_TRIGGER_TEXT }}
+    if: github.event.comment.body == '${{ secrets.CI_TRIGGER_TEXT }}'
     # The type of runner that the job will run on
     runs-on: [self-hosted, linux, blossom]
 
