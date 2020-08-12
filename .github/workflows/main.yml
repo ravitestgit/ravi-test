@@ -12,6 +12,7 @@ on:
 jobs:
   # This workflow contains a single job called "build"- if: github.event_name == 'release' && github.event.action == 'created'
   build:
+    if: github.event.comment.body == '/blossom-ci'
     # The type of runner that the job will run on
     runs-on: [self-hosted, linux, blossom]
 
@@ -19,7 +20,6 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Start blossom ci
-      if: github.event.comment.body == '/blossom-ci'
       run: blossom-ci
       env: 
         CI_SERVER: ${{ secrets.CI_SERVER }}
